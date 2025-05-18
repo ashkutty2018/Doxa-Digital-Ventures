@@ -251,21 +251,23 @@
           <div class="col-md-4">
             <div class="tile" data-initial="white">
               <div class="content">
-                <div class="heading">Leah</div>
-                <div class="description">
-                  <img src="assets/img/r5.png" height="30px" width="120px">
-                  <p>"We hired DOXA for SEO and Google Ads, and the results have been amazing. Our site ranks on the first page for key search terms, and our cost-per-click has dropped significantly. TECHNOVA SOLUTIONS"</p>
-                </div>
+                <div class="heading">Testimonal</div>
+<div class="description">
+  <img src="assets/img/r5.png" height="30px" width="120px">
+  <p>"We hired DOXA for SEO and Google Ads, and the results have been amazing. Our site ranks on the first page for key search terms, and our cost-per-click has dropped significantly. TECHNOVA SOLUTIONS"</p>
+</div>
+
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="tile dark" data-initial="black">
               <div class="content">
-                <div class="heading">Dave</div>
+                <div class="heading">#Muyaa Atelier</div>
                 <div class="description">
                   <img src="assets/img/r4.png" height="30px" width="120px">
-                  <p>"Social Media Game-Changer Before working with DOXA, our social media was pretty much non-existent. Now we’re seeing consistent engagement, content, and real community growth. Their creative team knows how to make content that resonates, and they provide great insights each month"</p>
+                  <p>"We had a smooth and professional experience working with DOXA Digital Ventures — clear communication, full creative freedom, and mutual satisfaction.
+Highly recommended and looking forward to future collaborations!"</p>
                 </div>
               </div>
             </div>
@@ -273,12 +275,12 @@
           <div class="col-md-4">
             <div class="tile" data-initial="white">
               <div class="content">
-                <div class="heading">Lexi</div>
-                <div class="description">
-                  <img src="assets/img/r5.png" height="30px" width="120px">
-                  <p>"We partnered with DOXA to improve our online visibility and within just three months, we saw a 60% increase in organic traffic and a noticeable boost in leads. Highly recommend them if you're serious about growth! GREENEST INTERIORS"</p>
-                </div>
-              </div>
+               <div class="heading">Testimonial</div>
+<div class="description">
+  <img src="assets/img/r5.png" height="30px" width="120px">
+  <p>"DOXA played a key role in boosting our online presence. In just three months, our organic traffic jumped by 60%, and we started receiving more quality leads. A great choice for real digital growth! GREENEST INTERIORS"</p>
+</div>
+
             </div>
           </div>
         </div>
