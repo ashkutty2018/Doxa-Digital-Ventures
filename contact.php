@@ -14,8 +14,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet" >
-  <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+  <link href="css/bootstrap.min.css" rel="stylesheet" >
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
   <!-- EmailJS -->
    <style>
   body
@@ -213,7 +213,7 @@
   </div>
  
   <!-- Scripts -->
-  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   
   <script>
     document.addEventListener('DOMContentLoaded', function () {

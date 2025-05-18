@@ -24,8 +24,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
   <!-- Russo One -->
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-<link href="assets/css/bootstrap.min.css" rel="stylesheet" >
-  <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.min.css" rel="stylesheet" >
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
   <style>
     /* Ensure the menu toggle icon is white by default */
   
@@ -470,7 +470,7 @@
 
 
   <!-- Scripts -->
-  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
   <!-- Client Tiles Hover Effect Script -->
   <script>

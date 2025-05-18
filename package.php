@@ -24,8 +24,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 
-<link href="assets/css/bootstrap.min.css" rel="stylesheet" >
-  <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.min.css" rel="stylesheet" >
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
   <!-- Inline Styles for Popup -->
   
 </head>
@@ -315,7 +315,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
   <!-- Get a Quote Popup Script -->
   <script>
