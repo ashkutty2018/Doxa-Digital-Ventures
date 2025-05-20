@@ -16,7 +16,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL) || !checkdnsrr($domain, "MX")) {
     exit;
 }
 
-// Step 2: Send Email to Admin
+// Step 2: Prepare email content
 $mail_subject = "New Contact Form Submission";
 $mail_body = "
 <html>
@@ -38,10 +38,17 @@ $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 $headers .= "From: Website Form <info@doxaconnect.com>\r\n"; // Replace with your domain email
 
-// Send the email
+// Step 3: Send the email and handle errors
 if (mail($admin_email, $mail_subject, $mail_body, $headers)) {
     echo "<script>alert('Thank you! Your message has been sent.'); window.location.href='contact.php';</script>";
 } else {
-    echo "<script>alert('Failed to send email.'); window.history.back();</script>";
+    // Get the last PHP error message if any
+    $error = error_get_last();
+    $error_message = $error['message'] ?? 'Unknown error occurred while sending email.';
+    
+    // Log error to a file for further debugging (optional)
+    error_log("Mail send error: " . $error_message);
+
+    echo "<script>alert('Failed to send email: " . addslashes($error_message) . "'); window.history.back();</script>";
 }
 ?>
