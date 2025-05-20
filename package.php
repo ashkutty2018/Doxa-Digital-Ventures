@@ -28,53 +28,7 @@
   <!-- Custom Styles -->
   <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
   <!-- Inline Styles for Popup -->
-  <style>
-    .popup-box ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      margin-bottom: 15px;
-      text-align: left;
-    }
-
-    .popup-box ul li {
-      font-size: 14px;
-      color: #ddd;
-      margin-bottom: 5px;
-    }
-
-    .popup-box .delivery-info {
-      font-size: 14px;
-      color: #aaa;
-      font-style: italic;
-      text-align: center;
-    }
-
-    /* Ensure cursor visibility in popup */
-    .popup-overlay {
-      cursor: auto; /* Default cursor for the overlay */
-    }
-
-    .popup-box {
-      cursor: default; /* Default for the popup box */
-    }
-
-    .popup-box .close-btn {
-      cursor: pointer; /* Pointer for the close button */
-    }
-
-    .popup-box input,
-    .popup-box textarea {
-      cursor: text; /* Text cursor for inputs and textarea */
-    }
-
-    .popup-box select {
-      cursor: pointer; /* Pointer for select dropdown */
-    }
-
-    .popup-box button {
-      cursor: pointer; /* Pointer for buttons */
-    }
-  </style>
+ 
 </head>
 <body>
   <!-- Header -->

@@ -1,54 +1,40 @@
 <?php
-// Set admin email
-$admin_email = "info@doxaconnect.com"; // Replace with your email
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-// Get form data
-$name = $_POST['name'] ?? '';
-$phone = $_POST['phone'] ?? '';
-$email = $_POST['email'] ?? '';
-$subject = $_POST['subject'] ?? 'Website Inquiry';
-$message = $_POST['message'] ?? '';
+require 'vendor/autoload.php';
 
-// Step 1: Validate email
-$domain = substr(strrchr($email, "@"), 1);
-if (!filter_var($email, FILTER_VALIDATE_EMAIL) || !checkdnsrr($domain, "MX")) {
-    echo "<script>alert('Invalid email address.'); window.history.back();</script>";
-    exit;
-}
+$mail = new PHPMailer(true);
 
-// Step 2: Prepare email content
-$mail_subject = "New Contact Form Submission";
-$mail_body = "
-<html>
-<head>
-  <title>New Inquiry</title>
-</head>
-<body>
-  <h2>New Inquiry Received</h2>
-  <p><strong>Name:</strong> " . htmlspecialchars($name) . "</p>
-  <p><strong>Phone:</strong> " . htmlspecialchars($phone) . "</p>
-  <p><strong>Email:</strong> " . htmlspecialchars($email) . "</p>
-  <p><strong>Subject:</strong> " . htmlspecialchars($subject) . "</p>
-  <p><strong>Message:</strong><br>" . nl2br(htmlspecialchars($message)) . "</p>
-</body>
-</html>
-";
+try {
+    //Server settings
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.gmail.com'; // Use your SMTP host
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'info@doxaconnect.com'; // Your email
+    $mail->Password   = 'doxablesson';   // App-specific password
+    $mail->SMTPSecure = 'tls';
+    $mail->Port       = 587;
 
-$headers = "MIME-Version: 1.0\r\n";
-$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-$headers .= "From: Website Form <info@doxaconnect.com>\r\n"; // Replace with your domain email
+    //Recipients
+    $mail->setFrom('info@doxaconnect.com', 'Website Contact');
+    $mail->addAddress('info@doxaconnect.com', 'Admin');
 
-// Step 3: Send the email and handle errors
-if (mail($admin_email, $mail_subject, $mail_body, $headers)) {
-    echo "<script>alert('Thank you! Your message has been sent.'); window.location.href='contact.php';</script>";
-} else {
-    // Get the last PHP error message if any
-    $error = error_get_last();
-    $error_message = $error['message'] ?? 'Unknown error occurred while sending email.';
-    
-    // Log error to a file for further debugging (optional)
-    error_log("Mail send error: " . $error_message);
+    // Content
+    $mail->isHTML(true);
+    $mail->Subject = 'New Contact Form Submission';
+    $mail->Body    = "
+        <h2>New Inquiry</h2>
+        <p><strong>Name:</strong> {$name}</p>
+        <p><strong>Email:</strong> {$email}</p>
+        <p><strong>Phone:</strong> {$phone}</p>
+        <p><strong>Subject:</strong> {$subject}</p>
+        <p><strong>Message:</strong><br>" . nl2br($message) . "</p>
+    ";
 
-    echo "<script>alert('Failed to send email: " . addslashes($error_message) . "'); window.history.back();</script>";
+    $mail->send();
+    echo "<script>alert('Message sent successfully!'); window.location.href='contact.php';</script>";
+} catch (Exception $e) {
+    echo "<script>alert('Mailer Error: " . addslashes($mail->ErrorInfo) . "'); window.history.back();</script>";
 }
 ?>
