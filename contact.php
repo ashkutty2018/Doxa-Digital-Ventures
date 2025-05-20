@@ -71,7 +71,7 @@
     <!-- Contact Form (Centered) -->
    <div class="contact-form">
   <h2>SEND US A MESSAGE</h2>
- <form id="contactForm" action="insert.php" method="post">
+ <form id="contactForm" action="/insert.php" method="POST">
   <label for="name">Name</label>
   <input type="text" id="name" name="name" required>
 
