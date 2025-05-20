@@ -210,29 +210,7 @@
     </form>
     </div>
   </div>
-  <script>
-  document.getElementById('quoteform').onsubmit = function (e) {
-    e.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const phone = document.getElementById('phone').value;
-    const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
-
-  const ownerNumber = "61438139784"; // Australia number WITHOUT '+'
-const whatsappUrl = `https://wa.me/${ownerNumber}?text=${encodeURIComponent(
-  `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nService: ${subject}\nMessage: ${message}`
-)}`;
-
-    window.open(whatsappUrl, '_blank');
-    closePopup();
-  };
-
-  function closePopup() {
-    document.getElementById("popupForm").style.display = "none";
-  }
-</script>
  
   <script src="assets/js/bootstrap.min.js"></script>
   
@@ -285,7 +263,9 @@ const whatsappUrl = `https://wa.me/${ownerNumber}?text=${encodeURIComponent(
       document.getElementById('popupForm').style.display = 'flex';
     }
 
-  
+    function closePopup() {
+    document.getElementById("popupForm").style.display = "none";
+  }
   </script>
 </body>
 </html>
