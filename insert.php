@@ -15,11 +15,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = isset($_POST['name']) ? trim($_POST['name']) : '';
     $email = isset($_POST['email']) ? trim($_POST['email']) : '';
     $phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
-    $subject = isset($_POST['subject']) ? trim($_POST['subject']) : '';
+  
     $message = isset($_POST['message']) ? trim($_POST['message']) : '';
 
     // Validate inputs
-    if (empty($name) || empty($email) || empty($phone) || empty($subject) || empty($message)) {
+    if (empty($name) || empty($email) || empty($phone) || empty($message)) {
         echo json_encode(['success' => false, 'message' => 'All fields are required.']);
         exit;
     }
@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
     $email = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
     $phone = htmlspecialchars($phone, ENT_QUOTES, 'UTF-8');
-    $subject = htmlspecialchars($subject, ENT_QUOTES, 'UTF-8');
+
     $message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
 
     $mail = new PHPMailer(true);
@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                       "Name: $name\n" .
                       "Email: $email\n" .
                       "Phone: $phone\n" .
-                      "Service: $subject\n" .
+                      
                       "Message:\n$message\n\n" .
                       "Date: " . date('Y-m-d H:i:s');
 
