@@ -20,13 +20,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Host       = 'smtp.gmail.com';  // SMTP server
         $mail->SMTPAuth   = true;
         $mail->Username   = 'rashkutty2018@gmail.com'; // Your Gmail
-        $mail->Password   = 'hdev slss zamj xisa';   // App password, not your regular Gmail password
+        $mail->Password   = 'hdevslsszamjxisa';   // App password, not your regular Gmail password
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 
         // Email content
         $mail->setFrom($email, $name);
-        $mail->addAddress('admin@example.com'); // Admin email
+        $mail->addAddress('rashkutty2018@gmail.com'); // Admin email
         $mail->Subject = 'New Contact Form Submission';
         $mail->Body    = "Name: $name\nEmail: $email\nPhone: $phone\nMessage:\n$message";
 
