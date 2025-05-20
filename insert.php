@@ -1,31 +1,39 @@
 <?php
-// Admin email
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name    = htmlspecialchars($_POST['name']);
-    $email   = htmlspecialchars($_POST['email']);
-    $phone   = htmlspecialchars($_POST['phone']);
-    $message = htmlspecialchars($_POST['message']);
+    $name    = $_POST['name'];
+    $email   = $_POST['email'];
+    $phone   = $_POST['phone'];
+    $message = $_POST['message'];
 
-    $admin_email = "info@doxaconnect.com"; // 🔁 Change this to your admin email
-    $subject = "New Contact Form Submission";
-    
-    $body = "You have received a new message from the contact form:\n\n";
-    $body .= "Name: $name\n";
-    $body .= "Email: $email\n";
-    $body .= "Phone: $phone\n";
-    $body .= "Message:\n$message\n";
+    $mail = new PHPMailer(true);
 
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
+    try {
+        // SMTP settings
+        $mail->isSMTP();
+        $mail->Host       = 'smtp.gmail.com';  // SMTP server
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'rashkutty2018@gmail.com'; // Your Gmail
+        $mail->Password   = 'hdev slss zamj xisa';   // App password, not your regular Gmail password
+        $mail->SMTPSecure = 'tls';
+        $mail->Port       = 587;
 
-    if (mail($admin_email, $subject, $body, $headers)) {
+        // Email content
+        $mail->setFrom($email, $name);
+        $mail->addAddress('admin@example.com'); // Admin email
+        $mail->Subject = 'New Contact Form Submission';
+        $mail->Body    = "Name: $name\nEmail: $email\nPhone: $phone\nMessage:\n$message";
+
+        $mail->send();
         echo "Message sent successfully!";
-    } else {
-        echo "Failed to send the message.";
+    } catch (Exception $e) {
+        echo "Failed to send the message. Mailer Error: {$mail->ErrorInfo}";
     }
-} else {
-    echo "Invalid request.";
 }
 ?>
