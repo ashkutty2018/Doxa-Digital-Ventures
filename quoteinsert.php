@@ -9,16 +9,16 @@ $mail = new PHPMailer(true);
 try {
     //Server settings
     $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com'; // Use your SMTP host
-    $mail->SMTPAuth   = true;
-    $mail->Username   = 'info@doxaconnect.com'; // Your email
-    $mail->Password   = 'doxablesson';   // App-specific password
+   $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'rashkutty2018@gmail.com'; // Your Gmail address
+        $mail->Password = 'hdevslsszamjxisa'; // Your Gmail App Password
     $mail->SMTPSecure = 'tls';
     $mail->Port       = 587;
 
     //Recipients
-    $mail->setFrom('info@doxaconnect.com', 'Website Contact');
-    $mail->addAddress('info@doxaconnect.com', 'Admin');
+    $mail->setFrom('rashkutty2018@gmail.com', 'Website Contact');
+    $mail->addAddress('rashkutty2018@gmail.com', 'Admin');
 
     // Content
     $mail->isHTML(true);

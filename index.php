@@ -436,7 +436,7 @@ Highly recommended and looking forward to future collaborations!"</p>
   <div class="popup-box">
     <span class="close-btn" onclick="closePopup()">×</span>
     <h2>Get a Quote</h2>
-    <form method="post" id="quoteform">
+    <form method="post" id="quoteform" action="quoteinsert.php">
       <input type="text" id="name" name="name" placeholder="Your Name" required />
       <input type="number" id="phone" name="phone" placeholder="Your Phone No" required />
       <input type="email" id="email" name="email" placeholder="Your Email" required />
@@ -458,28 +458,6 @@ Highly recommended and looking forward to future collaborations!"</p>
     </form>
   </div>
 </div>
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "rashkutty2018@gmail.com"; // Replace with your email
-    $name = htmlspecialchars($_POST["name"]);
-    $phone = htmlspecialchars($_POST["phone"]);
-    $email = htmlspecialchars($_POST["email"]);
-    $subject = htmlspecialchars($_POST["subject"]);
-    $message = htmlspecialchars($_POST["message"]);
-
-    $headers = "From: $name <$email>\r\n" .
-               "Reply-To: $email\r\n" .
-               "X-Mailer: PHP/" . phpversion();
-
-    $fullMessage = "Name: $name\nPhone: $phone\nEmail: $email\n\nMessage:\n$message";
-
-    if (mail($to, $subject, $fullMessage, $headers)) {
-        echo "<script>alert('Message sent successfully!'); window.location.href='index.php';</script>";
-    } else {
-        echo "<script>alert('Sorry, something went wrong. Please try again.');</script>";
-    }
-}
-?>
 
 
   <!-- Scripts -->
