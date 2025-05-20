@@ -71,21 +71,22 @@
     <!-- Contact Form (Centered) -->
    <div class="contact-form">
   <h2>SEND US A MESSAGE</h2>
-  <form id="contactForm" action="insert.php" method="post">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required>
+ <form id="contactForm" action="insert.php" method="post">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required>
 
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required>
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
 
-    <label for="phone">Phone No</label>
-    <input type="number" id="phone" name="phone" required>
+  <label for="phone">Phone No</label>
+  <input type="number" id="phone" name="phone" required>
 
-    <label for="message">Message</label>
-    <textarea id="message" name="message" required></textarea>
+  <label for="message">Message</label>
+  <textarea id="message" name="message" required></textarea>
 
-    <button type="submit">Send Message</button>
-  </form>
+  <button type="submit">Send Message</button>
+</form>
+
 </div>
 
 
