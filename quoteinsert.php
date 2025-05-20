@@ -4,19 +4,26 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
 
+// Get form data safely
+$name = isset($_POST['name']) ? trim($_POST['name']) : '';
+$email = isset($_POST['email']) ? trim($_POST['email']) : '';
+$phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
+$subject = isset($_POST['subject']) ? trim($_POST['subject']) : '';
+$message = isset($_POST['message']) ? trim($_POST['message']) : '';
+
 $mail = new PHPMailer(true);
 
 try {
-    //Server settings
+    // Server settings
     $mail->isSMTP();
-   $mail->Host = 'smtp.gmail.com';
-        $mail->SMTPAuth = true;
-        $mail->Username = 'rashkutty2018@gmail.com'; // Your Gmail address
-        $mail->Password = 'hdevslsszamjxisa'; // Your Gmail App Password
+    $mail->Host       = 'smtp.gmail.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'rashkutty2018@gmail.com'; // Your Gmail address
+    $mail->Password   = 'hdevslsszamjxisa';        // Gmail App Password
     $mail->SMTPSecure = 'tls';
     $mail->Port       = 587;
 
-    //Recipients
+    // Recipients
     $mail->setFrom('rashkutty2018@gmail.com', 'Website Contact');
     $mail->addAddress('rashkutty2018@gmail.com', 'Admin');
 
