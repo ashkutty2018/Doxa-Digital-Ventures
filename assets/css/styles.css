@@ -806,6 +806,197 @@ header .logo img {
   .logo-item { width: 150px; height: 75px; margin: 0 15px; font-size: 0.9rem; }
 }
 
+/* Package */
+.package-section .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.package-section .col-md-3 {
+  display: flex;
+}
+
+.package-card {
+  background: #292727;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.package-card h4 {
+  margin-top: 15px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.package-card p {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #ffffff;
+  flex-grow: 1;
+}
+
+.package-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  display: block; /* Makes the image a block-level element */
+  margin-left: auto; /* Centers the image horizontally */
+  margin-right: auto;
+}
+.package-card .inimg
+{
+  filter: invert(100%); /* Makes the icons white */
+}
+.tier-buttons {
+  margin-top: 15px;
+}
+
+.tier-buttons button {
+  margin: 5px;
+  background: #5a5858;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100px;
+}
+
+.tier-buttons button:hover {
+  background: #cc6805;
+  color: #0e0c0c;
+}
+
+.tier-description {
+  margin-top: 15px;
+  background: #444;
+  padding: 15px;
+  border-radius: 8px;
+  color: #ddd;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.vertical-line {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #e2650c;
+}
+
+@media (max-width: 767px) {
+  .vertical-line {
+    display: none;
+  }
+}
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.4s ease;
+ 
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.popup-box {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 30px 25px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+   cursor: pointer;
+}
+
+.popup-box h2 {
+  font-size: 24px;
+  color: #222;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.popup-box input,
+.popup-box textarea,
+.popup-box select
+ {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.popup-box input:focus,
+.popup-box select:focus,
+.popup-box textarea:focus {
+  border-color: black;
+  outline: none;
+}
+
+.popup-box button {
+  width: 100%;
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.popup-box button:hover {
+  background: #333;
+}
+
+.popup-box .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.popup-box .close-btn:hover {
+  color: red;
+}
 /* Clients Section */
 
 .clients {
