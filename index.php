@@ -458,29 +458,28 @@ Highly recommended and looking forward to future collaborations!"</p>
       </form>
     </div>
   </div>
-  <script>
-  document.getElementById('quoteform').onsubmit = function (e) {
-    e.preventDefault();
+ <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $to = "info@doxaconnect.au"; // Replace with your email
+    $name = htmlspecialchars($_POST["name"]);
+    $phone = htmlspecialchars($_POST["phone"]);
+    $email = htmlspecialchars($_POST["email"]);
+    $subject = htmlspecialchars($_POST["subject"]);
+    $message = htmlspecialchars($_POST["message"]);
 
-    const name = document.getElementById('name').value;
-    const phone = document.getElementById('phone').value;
-    const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
+    $headers = "From: $name <$email>\r\n" .
+               "Reply-To: $email\r\n" .
+               "X-Mailer: PHP/" . phpversion();
 
-  const ownerNumber = "61438139784"; // Australia number WITHOUT '+'
-const whatsappUrl = `https://wa.me/${ownerNumber}?text=${encodeURIComponent(
-  `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nService: ${subject}\nMessage: ${message}`
-)}`;
+    $fullMessage = "Name: $name\nPhone: $phone\nEmail: $email\n\nMessage:\n$message";
 
-    window.open(whatsappUrl, '_blank');
-    closePopup();
-  };
-
-  function closePopup() {
-    document.getElementById("popupForm").style.display = "none";
-  }
-</script>
+    if (mail($to, $subject, $fullMessage, $headers)) {
+        echo "<script>alert('Message sent successfully!'); window.location.href='index.php';</script>";
+    } else {
+        echo "<script>alert('Sorry, something went wrong. Please try again.');</script>";
+    }
+}
+?>
 
   <!-- Scripts -->
   <script src="assets/js/bootstrap.min.js"></script>
