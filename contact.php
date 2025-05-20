@@ -117,23 +117,7 @@
     </div>
   </section>
 
-<script>
-  document.getElementById('contactForm').onsubmit = function (e) {
-    e.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const phone = document.getElementById('phone').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-
-    const ownerNumber = "61438139784"; // WhatsApp number without '+'
-    const whatsappUrl = `https://wa.me/${ownerNumber}?text=${encodeURIComponent(
-      `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nMessage: ${message}`
-    )}`;
-
-    window.open(whatsappUrl, '_blank');
-  };
-</script>
   <!-- Footer -->
   <footer class="combined-footer">
     <h2><img src="assets/img/white.png" height="50px" width="150px"></h2>
