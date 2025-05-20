@@ -14,8 +14,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="css/bootstrap.min.css" rel="stylesheet" >
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="styles.css" rel="stylesheet" type="text/css">
   <!-- EmailJS -->
    <style>
   body
@@ -104,15 +104,13 @@
         <a href="https://www.facebook.com/share/1RHvz95efv/?mibextid=qi2Omg" target="_blank" class="social-icon">
           <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="https://www.facebook.com" target="_blank" class="social-icon">
+        <a href="https://www.youtube.com" target="_blank" class="social-icon">
           <i class="fab fa-youtube"></i>
         </a>
-        <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+         <a href="https://www.linkedin.com" target="_blank" class="social-icon">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://www.twitter.com" target="_blank" class="social-icon">
-          <i class="fab fa-twitter"></i>
-        </a>
+         
       </div>
     </div>
   </section>
@@ -171,15 +169,13 @@
         <a href="https://www.facebook.com/share/1RHvz95efv/?mibextid=qi2Omg" target="_blank" class="social-icon">
           <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="https://www.facebook.com" target="_blank" class="social-icon">
+        <a href="https://www.youtube.com" target="_blank" class="social-icon">
           <i class="fab fa-youtube"></i>
         </a>
          <a href="https://www.linkedin.com" target="_blank" class="social-icon">
           <i class="fab fa-linkedin"></i>
         </a>
-         <a href="https://www.twitter.com" target="_blank" class="social-icon">
-          <i class="fab fa-twitter"></i>
-        </a>
+         
       </div>
     </div>
   </footer>
@@ -212,8 +208,7 @@
     </div>
   </div>
  
-  <!-- Scripts -->
-  <script src="js/bootstrap.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
   
   <script>
     document.addEventListener('DOMContentLoaded', function () {
