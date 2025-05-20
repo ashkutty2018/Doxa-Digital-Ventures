@@ -328,26 +328,26 @@
     <div class="popup-box">
       <span class="close-btn" onclick="closePopup()">×</span>
       <h2>Get a Quote</h2>
-      <form method="post" id="quoteform">
-        <input type="text" id="name" placeholder="Your Name" required />
-        <input type="number" id="phone" placeholder="Your Phone No" required />
-        <input type="email" id="email" placeholder="Your Email" required />
-        <select id="subject" id="subject" required>
-          <option value="" disabled selected>Select a Service</option>
-          <option value="Website Design & Development">Website Design & Development</option>
-          <option value="Content Creation">Content Creation</option>
-          <option value="Branding">Branding</option>
-          <option value="SEO">SEO</option>
-          <option value="Strategic Business Consultation">Strategic Business Consultation</option>
-          <option value="Neuro Marketing">Neuro Marketing</option>
-          <option value="Social Media Marketing">Social Media Marketing</option>
-          <option value="Whatsapp Marketing">Whatsapp Marketing</option>
-          <option value="PPC Advertising">PPC Advertising</option>
-          <option value="AI Powered Marketing">AI Powered Marketing</option>
-        </select>
-        <textarea rows="4" placeholder="Your Message" id="message" required></textarea>
-        <button type="submit">Submit</button>
-      </form>
+       <form method="post" id="quoteform" action="quoteinsert.php">
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+      <input type="number" id="phone" name="phone" placeholder="Your Phone No" required />
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+      <select id="subject" name="subject" required>
+        <option value="" disabled selected>Select a Service</option>
+        <option value="Website Design & Development">Website Design & Development</option>
+        <option value="Content Creation">Content Creation</option>
+        <option value="Branding">Branding</option>
+        <option value="SEO">SEO</option>
+        <option value="Strategic Business Consultation">Strategic Business Consultation</option>
+        <option value="Neuro Marketing">Neuro Marketing</option>
+        <option value="Social Media Marketing">Social Media Marketing</option>
+        <option value="Whatsapp Marketing">Whatsapp Marketing</option>
+        <option value="PPC Advertising">PPC Advertising</option>
+        <option value="AI Powered Marketing">AI Powered Marketing</option>
+      </select>
+      <textarea rows="4" id="message" name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
     </div>
   </div>
   <script>

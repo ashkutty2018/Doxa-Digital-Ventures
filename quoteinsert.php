@@ -18,8 +18,8 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'rashkutty2018@gmail.com'; // Your Gmail address
-    $mail->Password   = 'hdevslsszamjxisa';        // Gmail App Password
+    $mail->Username   = 'rashkutty2018@gmail.com';
+    $mail->Password   = 'hdevslsszamjxisa';
     $mail->SMTPSecure = 'tls';
     $mail->Port       = 587;
 
