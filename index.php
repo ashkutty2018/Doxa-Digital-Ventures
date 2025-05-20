@@ -460,7 +460,7 @@ Highly recommended and looking forward to future collaborations!"</p>
 </div>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "info@doxaconnect.au"; // Replace with your email
+    $to = "rashkutty2018@gmail.com"; // Replace with your email
     $name = htmlspecialchars($_POST["name"]);
     $phone = htmlspecialchars($_POST["phone"]);
     $email = htmlspecialchars($_POST["email"]);
