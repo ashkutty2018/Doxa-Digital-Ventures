@@ -28,7 +28,53 @@
   <!-- Custom Styles -->
   <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
   <!-- Inline Styles for Popup -->
- 
+ <style>
+    .popup-box ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .popup-box ul li {
+      font-size: 14px;
+      color: #ddd;
+      margin-bottom: 5px;
+    }
+
+    .popup-box .delivery-info {
+      font-size: 14px;
+      color: #aaa;
+      font-style: italic;
+      text-align: center;
+    }
+
+    /* Ensure cursor visibility in popup */
+    .popup-overlay {
+      cursor: auto; /* Default cursor for the overlay */
+    }
+
+    .popup-box {
+      cursor: default; /* Default for the popup box */
+    }
+
+    .popup-box .close-btn {
+      cursor: pointer; /* Pointer for the close button */
+    }
+
+    .popup-box input,
+    .popup-box textarea {
+      cursor: text; /* Text cursor for inputs and textarea */
+    }
+
+    .popup-box select {
+      cursor: pointer; /* Pointer for select dropdown */
+    }
+
+    .popup-box button {
+      cursor: pointer; /* Pointer for buttons */
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -278,15 +324,15 @@
   </footer>
 
   <!-- Get a Quote Popup -->
-  <div class="popup-overlay" id="popupForm">
+    <div class="popup-overlay" id="popupForm">
     <div class="popup-box">
       <span class="close-btn" onclick="closePopup()">×</span>
       <h2>Get a Quote</h2>
-      <form method="post" action="quoteinsert.php">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="number" name="phone" placeholder="Your Phone No" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <select id="subject" name="subject" required>
+      <form method="post" id="quoteform">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="number" id="phone" placeholder="Your Phone No" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <select id="subject" id="subject" required>
           <option value="" disabled selected>Select a Service</option>
           <option value="Website Design & Development">Website Design & Development</option>
           <option value="Content Creation">Content Creation</option>
@@ -299,12 +345,34 @@
           <option value="PPC Advertising">PPC Advertising</option>
           <option value="AI Powered Marketing">AI Powered Marketing</option>
         </select>
-        <textarea rows="4" placeholder="Your Message" name="message" required></textarea>
+        <textarea rows="4" placeholder="Your Message" id="message" required></textarea>
         <button type="submit">Submit</button>
       </form>
     </div>
   </div>
+  <script>
+  document.getElementById('quoteform').onsubmit = function (e) {
+    e.preventDefault();
 
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+  const ownerNumber = "61438139784"; // Australia number WITHOUT '+'
+const whatsappUrl = `https://wa.me/${ownerNumber}?text=${encodeURIComponent(
+  `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nService: ${subject}\nMessage: ${message}`
+)}`;
+
+    window.open(whatsappUrl, '_blank');
+    closePopup();
+  };
+
+  function closePopup() {
+    document.getElementById("popupForm").style.display = "none";
+  }
+</script>
   <!-- Tier Details Popup -->
   <div class="popup-overlay" id="tierPopup">
     <div class="popup-box">
@@ -321,9 +389,7 @@
     function openPopup() {
       document.getElementById('popupForm').style.display = 'flex';
     }
-    function closePopup() {
-      document.getElementById('popupForm').style.display = 'none';
-    }
+   
   </script>
 
   <!-- Tier Details Popup Script -->

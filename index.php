@@ -436,11 +436,11 @@ Highly recommended and looking forward to future collaborations!"</p>
     <div class="popup-box">
       <span class="close-btn" onclick="closePopup()">×</span>
       <h2>Get a Quote</h2>
-      <form method="post" action="quoteinsert.php">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="number" name="phone" placeholder="Your Phone No" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <select id="subject" name="subject" required>
+      <form method="post" id="quoteform">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="number" id="phone" placeholder="Your Phone No" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <select id="subject" id="subject" required>
           <option value="" disabled selected>Select a Service</option>
           <option value="Website Design & Development">Website Design & Development</option>
           <option value="Content Creation">Content Creation</option>
@@ -453,11 +453,34 @@ Highly recommended and looking forward to future collaborations!"</p>
           <option value="PPC Advertising">PPC Advertising</option>
           <option value="AI Powered Marketing">AI Powered Marketing</option>
         </select>
-        <textarea rows="4" placeholder="Your Message" name="message" required></textarea>
+        <textarea rows="4" placeholder="Your Message" id="message" required></textarea>
         <button type="submit">Submit</button>
       </form>
     </div>
   </div>
+  <script>
+  document.getElementById('quoteform').onsubmit = function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+  const ownerNumber = "61438139784"; // Australia number WITHOUT '+'
+const whatsappUrl = `https://wa.me/${ownerNumber}?text=${encodeURIComponent(
+  `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nService: ${subject}\nMessage: ${message}`
+)}`;
+
+    window.open(whatsappUrl, '_blank');
+    closePopup();
+  };
+
+  function closePopup() {
+    document.getElementById("popupForm").style.display = "none";
+  }
+</script>
 
   <!-- Scripts -->
   <script src="assets/js/bootstrap.min.js"></script>

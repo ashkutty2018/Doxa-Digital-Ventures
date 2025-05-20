@@ -14,8 +14,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link href="styles.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
   <!-- EmailJS -->
    <style>
   body
@@ -69,26 +69,27 @@
   <!-- Contact Section -->
   <section class="contact-section">
     <!-- Contact Form (Centered) -->
-    <div class="contact-form">
-      <h2>SEND US A MESSAGE</h2>
-      <form id="contactForm" action="insert.php" method="post">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
+   <div class="contact-form">
+  <h2>SEND US A MESSAGE</h2>
+  <form id="contactForm" action="insert.php" method="post">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
 
-        <label for="subject">Phoneno</label>
-          <input type="number" id="email" name="phone" required>
+    <label for="phone">Phone No</label>
+    <input type="number" id="phone" name="phone" required>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
+    <label for="message">Message</label>
+    <textarea id="message" name="message" required></textarea>
 
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
+    <button type="submit">Send Message</button>
+  </form>
+</div>
 
-    <!-- Contact Info (Below Form) -->
+
+  
     <div class="contact-info">
       <h2>GET IN TOUCH</h2>
       <p><i class="fas fa-map-marker-alt"></i> Melbourne, Australia</p>
@@ -115,6 +116,23 @@
     </div>
   </section>
 
+<script>
+  document.getElementById('contactForm').onsubmit = function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    const ownerNumber = "61438139784"; // WhatsApp number without '+'
+    const whatsappUrl = `https://wa.me/${ownerNumber}?text=${encodeURIComponent(
+      `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nMessage: ${message}`
+    )}`;
+
+    window.open(whatsappUrl, '_blank');
+  };
+</script>
   <!-- Footer -->
   <footer class="combined-footer">
     <h2><img src="assets/img/white.png" height="50px" width="150px"></h2>
@@ -181,15 +199,15 @@
   </footer>
 
   <!-- Popup -->
-  <div class="popup-overlay" id="popupForm">
+   <div class="popup-overlay" id="popupForm">
     <div class="popup-box">
       <span class="close-btn" onclick="closePopup()">×</span>
       <h2>Get a Quote</h2>
-     <form method="post" action="quoteinsert.php">
-        <input type="text"name="name" placeholder="Your Name" required />
-        <input type="number" name="phone" placeholder="Your Phone No" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <select id="subject" name="subject" required>
+      <form method="post" id="quoteform">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="number" id="phone" placeholder="Your Phone No" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <select id="subject" id="subject" required>
           <option value="" disabled selected>Select a Service</option>
           <option value="Website Design & Development">Website Design & Development</option>
           <option value="Content Creation">Content Creation</option>
@@ -202,11 +220,34 @@
           <option value="PPC Advertising">PPC Advertising</option>
           <option value="AI Powered Marketing">AI Powered Marketing</option>
         </select>
-        <textarea rows="4" placeholder="Your Message" name="message" required></textarea>
+        <textarea rows="4" placeholder="Your Message" id="message" required></textarea>
         <button type="submit">Submit</button>
       </form>
     </div>
   </div>
+  <script>
+  document.getElementById('quoteform').onsubmit = function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+  const ownerNumber = "61438139784"; // Australia number WITHOUT '+'
+const whatsappUrl = `https://wa.me/${ownerNumber}?text=${encodeURIComponent(
+  `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nService: ${subject}\nMessage: ${message}`
+)}`;
+
+    window.open(whatsappUrl, '_blank');
+    closePopup();
+  };
+
+  function closePopup() {
+    document.getElementById("popupForm").style.display = "none";
+  }
+</script>
  
   <script src="assets/js/bootstrap.min.js"></script>
   
@@ -259,9 +300,7 @@
       document.getElementById('popupForm').style.display = 'flex';
     }
 
-    function closePopup() {
-      document.getElementById('popupForm').style.display = 'none';
-    }
+  
   </script>
 </body>
 </html>

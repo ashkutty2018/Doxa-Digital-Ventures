@@ -1,33 +1,40 @@
 <?php
-// Get form data
-$uname = $_POST["name"] ?? '';
-$email = $_POST["email"] ?? '';
-$phone = $_POST["phone"] ?? '';
-$event = $_POST["subject"] ?? '';
-$sdate = $_POST["message"] ?? '';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-// Basic validation (optional)
-if (empty($uname) || empty($email) || empty($phone) || empty($event) || empty($sdate)) {
-    die("All fields are required!");
-}
+require 'vendor/autoload.php';
 
-// Set admin email
-$adminEmail = "info@doxaconnect.com";
+$mail = new PHPMailer(true);
 
-// Create email content
-$subject = "New Appointment Booked";
-$message = "A new appointment has been booked:\n\n";
-$message .= "Name: $uname\n";
-$message .= "Email: $email\n";
-$message .= "Phone: $phone\n";
-$message .= "Consultation: $event\n";
-$message .= "Selected Time: $sdate\n";
+try {
+    //Server settings
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.gmail.com'; // Use your SMTP host
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'info@doxaconnect.com'; // Your email
+    $mail->Password   = 'doxablesson';   // App-specific password
+    $mail->SMTPSecure = 'tls';
+    $mail->Port       = 587;
 
-// Send email
-$headers = "From: $email\r\n";
-if (mail($adminEmail, $subject, $message, $headers)) {
-    echo "<script>alert('Thank you! Your appointment has been submitted.'); window.location.href = 'viewprice.php';</script>";
-} else {
-    echo "<script>alert('Failed to send the email. Please try again later.'); window.history.back();</script>";
+    //Recipients
+    $mail->setFrom('info@doxaconnect.com', 'Website Contact');
+    $mail->addAddress('info@doxaconnect.com', 'Admin');
+
+    // Content
+    $mail->isHTML(true);
+    $mail->Subject = 'New Contact Form Submission';
+    $mail->Body    = "
+        <h2>New Inquiry</h2>
+        <p><strong>Name:</strong> {$name}</p>
+        <p><strong>Email:</strong> {$email}</p>
+        <p><strong>Phone:</strong> {$phone}</p>
+        <p><strong>Subject:</strong> {$subject}</p>
+        <p><strong>Message:</strong><br>" . nl2br($message) . "</p>
+    ";
+
+    $mail->send();
+    echo "<script>alert('Message sent successfully!'); window.location.href='contact.php';</script>";
+} catch (Exception $e) {
+    echo "<script>alert('Mailer Error: " . addslashes($mail->ErrorInfo) . "'); window.history.back();</script>";
 }
 ?>
