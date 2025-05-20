@@ -14,7 +14,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+  <!-- Bootstrap CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Additional Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
@@ -24,10 +25,56 @@
   <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 
-<link href="css/bootstrap.min.css" rel="stylesheet" >
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <!-- Custom Styles -->
+  <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
   <!-- Inline Styles for Popup -->
-  
+  <style>
+    .popup-box ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .popup-box ul li {
+      font-size: 14px;
+      color: #ddd;
+      margin-bottom: 5px;
+    }
+
+    .popup-box .delivery-info {
+      font-size: 14px;
+      color: #aaa;
+      font-style: italic;
+      text-align: center;
+    }
+
+    /* Ensure cursor visibility in popup */
+    .popup-overlay {
+      cursor: auto; /* Default cursor for the overlay */
+    }
+
+    .popup-box {
+      cursor: default; /* Default for the popup box */
+    }
+
+    .popup-box .close-btn {
+      cursor: pointer; /* Pointer for the close button */
+    }
+
+    .popup-box input,
+    .popup-box textarea {
+      cursor: text; /* Text cursor for inputs and textarea */
+    }
+
+    .popup-box select {
+      cursor: pointer; /* Pointer for select dropdown */
+    }
+
+    .popup-box button {
+      cursor: pointer; /* Pointer for buttons */
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -256,7 +303,7 @@
     <div class="footer-bottom">
       <p>© 2025 DOXA Digital Ventures. All Rights Reserved.</p>
       <div class="social-icons">
-        <a href="https://www.instagram.com/doxadigitalventures?igsh=MTRkajVvNnZpeWtqeQ==" target="_blank" class="social-icon">
+         <a href="https://www.instagram.com/doxadigitalventures?igsh=MTRkajVvNnZpeWtqeQ==" target="_blank" class="social-icon">
           <i class="fab fa-instagram"></i>
         </a>
         <a href="https://wa.me/message/TYS3R2ONAMVIA1" target="_blank" class="social-icon">
@@ -265,15 +312,13 @@
         <a href="https://www.facebook.com/share/1RHvz95efv/?mibextid=qi2Omg" target="_blank" class="social-icon">
           <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="https://www.facebook.com" target="_blank" class="social-icon">
+        <a href="https://www.youtube.com" target="_blank" class="social-icon">
           <i class="fab fa-youtube"></i>
         </a>
-        <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+         <a href="https://www.linkedin.com" target="_blank" class="social-icon">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://www.twitter.com" target="_blank" class="social-icon">
-          <i class="fab fa-twitter"></i>
-        </a>
+         
       </div>
     </div>
   </footer>
@@ -315,7 +360,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/bootstrap.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
 
   <!-- Get a Quote Popup Script -->
   <script>
@@ -482,46 +527,35 @@
           delivery: "7–10 Days"
         }
       },
-     "Social Media Handling": {
-  "basic": {
-    "features": [
-      "5 posts/week on 1 platform",
-      "Caption writing",
-      "Hashtag strategy",
-      "Weekly calendar",
-      "Basic creative designs",
-      "Profile optimization",
-      "Basic engagement (likes/comments)"
-    ],
-    "duration": "Monthly"
-  },
-  "standard": {
-    "features": [
-      "10 posts/week on 2 platforms (e.g., Instagram + Facebook)",
-      "Story templates",
-      "Monthly insights report",
-      "Ad boosting guidance",
-      "Moderate creative designs",
-      "DM & comment reply support",
-      "Festival/occasion post planning"
-    ],
-    "duration": "Monthly"
-  },
-  "premium": {
-    "features": [
-      "Daily posts (Incl. Reels, Stories, Carousels)",
-      "3+ platforms (Incl. LinkedIn/Twitter)",
-      "Influencer collaboration plan",
-      "Monthly strategy meeting",
-      "Advanced analytics & reporting",
-      "Advanced creative content & reels",
-      "Giveaway & campaign handling",
-      "Community building strategy"
-    ],
-    "duration": "Monthly"
-  }
-}
-,
+      "Social Media Handling": {
+        basic: {
+          features: [
+            "5 posts/week on 1 platform",
+            "Caption writing",
+            "Hashtag strategy",
+            "Weekly calendar"
+          ],
+          duration: "Monthly"
+        },
+        standard: {
+          features: [
+            "10 posts/week on 2 platforms (e.g., Instagram + Facebook)",
+            "Story templates",
+            "Monthly insights report",
+            "Ad boosting guidance"
+          ],
+          duration: "Monthly"
+        },
+        premium: {
+          features: [
+            "Daily posts (Incl. Reels, Stories, Carousels)",
+            "3+ platforms (Incl. LinkedIn/Twitter)",
+            "Influencer collaboration plan",
+            "Monthly strategy meeting"
+          ],
+          duration: "Monthly"
+        }
+      },
       "Content Creation": {
         basic: {
           features: [

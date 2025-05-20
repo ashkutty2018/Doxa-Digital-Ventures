@@ -4,10 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DOXA Digital Ventures</title>
-  <!-- Bootstrap CSS -->
+  <!-- Favicon -->
   <link href="assets/img/doxa.png" rel="icon" />
-  <!-- Bootstrap CSS -->
-
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -15,8 +13,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Corrected font link for Boldonse (if available, otherwise use a fallback) -->
-  <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
   <!-- Bebas Neue -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
@@ -24,13 +20,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
   <!-- Russo One -->
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-<link href="css/bootstrap.min.css" rel="stylesheet" >
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <style>
-    /* Ensure the menu toggle icon is white by default */
-  
-
-  </style>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
   <header>
@@ -203,8 +194,7 @@
       </div>
     </div>
   </section>
-
-  <section class="clients">
+ <section class="clients">
     <div class="clients-wrapper">
       <div class="container clients-heading">
         <div class="row justify-content-center">
@@ -225,7 +215,7 @@
             <div class="tile dark" data-initial="black">
               <div class="content">
                 <div class="heading">PROJECTS</div>
-                <div class="description"><span>150+</span></div>
+                <div class="description">Completed projects across various domains with quality and innovation</div>
               </div>
             </div>
           </div>
@@ -243,7 +233,7 @@
             <div class="tile dark" data-initial="black">
               <div class="content">
                 <div class="heading">CLIENTS</div>
-                <div class="description"><span>120+</span></div>
+                <div class="description">Trusted by clients worldwide for quality and commitment.</div>
               </div>
             </div>
           </div>
@@ -254,7 +244,7 @@
                 <div class="heading">Testimonal</div>
 <div class="description">
   <img src="assets/img/r5.png" height="30px" width="120px">
-  <p>"We hired DOXA for SEO and Google Ads, and the results have been amazing. Our site ranks on the first page for key search terms, and our cost-per-click has dropped significantly. TECHNOVA SOLUTIONS"</p>
+  <p>"We hired DOXA for SEO and Google Ads, and the results have been amazing. Our site ranks on the first page for key search terms, and our cost-per-click has dropped significantly"</p>
 </div>
 
               </div>
@@ -278,7 +268,7 @@ Highly recommended and looking forward to future collaborations!"</p>
                <div class="heading">Testimonial</div>
 <div class="description">
   <img src="assets/img/r5.png" height="30px" width="120px">
-  <p>"DOXA played a key role in boosting our online presence. In just three months, our organic traffic jumped by 60%, and we started receiving more quality leads. A great choice for real digital growth! GREENEST INTERIORS"</p>
+  <p>"DOXA played a key role in boosting our online presence. In just three months, our organic traffic jumped by 60%, and we started receiving more quality leads. A great choice for real digital growth!"</p>
 </div>
 
             </div>
@@ -287,6 +277,7 @@ Highly recommended and looking forward to future collaborations!"</p>
       </div>
     </div>
   </section>
+
 
   <!-- Blog Section -->
   <section class="blog-section py-5 text-center">
@@ -429,15 +420,13 @@ Highly recommended and looking forward to future collaborations!"</p>
         <a href="https://www.facebook.com/share/1RHvz95efv/?mibextid=qi2Omg" target="_blank" class="social-icon">
           <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="https://www.facebook.com" target="_blank" class="social-icon">
+        <a href="https://www.youtube.com" target="_blank" class="social-icon">
           <i class="fab fa-youtube"></i>
         </a>
-        <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+         <a href="https://www.linkedin.com" target="_blank" class="social-icon">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://www.twitter.com" target="_blank" class="social-icon">
-          <i class="fab fa-twitter"></i>
-        </a>
+         
       </div>
     </div>
   </footer>
@@ -448,7 +437,7 @@ Highly recommended and looking forward to future collaborations!"</p>
       <span class="close-btn" onclick="closePopup()">×</span>
       <h2>Get a Quote</h2>
       <form method="post" action="quoteinsert.php">
-        <input type="text"name="name" placeholder="Your Name" required />
+        <input type="text" name="name" placeholder="Your Name" required />
         <input type="number" name="phone" placeholder="Your Phone No" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <select id="subject" name="subject" required>
@@ -470,9 +459,8 @@ Highly recommended and looking forward to future collaborations!"</p>
     </div>
   </div>
 
-
   <!-- Scripts -->
-  <script src="js/bootstrap.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
 
   <!-- Client Tiles Hover Effect Script -->
   <script>

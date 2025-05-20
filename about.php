@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>DOXA Digital Ventures</title>
+  <title>DOXA Digital Ventures</title>
   <!-- Bootstrap CSS -->
   <link href="assets/img/doxa.png" rel="icon" />
   
@@ -19,7 +19,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link
-    href="css/bootstrap.min.css"
+    href="assets/css/bootstrap.min.css"
     rel="stylesheet"
   />
 
@@ -27,7 +27,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
    <style>
   body
     {
@@ -73,7 +73,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <p class="section-text" data-line="1">   We are a results-driven digital marketing agency, and our mission at DOXA is simple: we help businesses grow.</p>
+          <p class="section-text" data-line="1">   We are a results-driven digital marketing agency, and our mission at DOXA is simple:<br> we help businesses grow.</p>
           <p class="section-text" data-line="2">Our work follows a customer-first philosophy, and we blend creativity and analytics to achieve measurable success. From startups seeking to gain an online presence to seasoned enterprises pursuing digital transformation, we offer the strategy and implementation you need to make it happen.
   
            
@@ -81,8 +81,8 @@
             
           </p>
           <p class="section-text" data-line="3"> We are the solution you need to get to the next level, broaden your reach, and position yourself globally in the digital arena.</p>
-          <p class="section-text" data-line="4">We are the solution you need to get to the next level, broaden your reach, and position yourself globally in the digital arena.</p>
-          <p class="section-text" data-line="5">Perfect for startups or enterprises aiming for digital dominance. Let us help you expand globally with our expert services.</p>
+         
+          <p class="section-text" data-line="4">Perfect for startups or enterprises aiming for digital dominance. Let us help you expand globally with our expert services.</p>
           <div class="vertical-line d-none d-md-block"></div>
         </div>
         <div class="col-md-6">
@@ -191,15 +191,13 @@
         <a href="https://www.facebook.com/share/1RHvz95efv/?mibextid=qi2Omg" target="_blank" class="social-icon">
           <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="https://www.facebook.com" target="_blank" class="social-icon">
+        <a href="https://www.youtube.com" target="_blank" class="social-icon">
           <i class="fab fa-youtube"></i>
         </a>
          <a href="https://www.linkedin.com" target="_blank" class="social-icon">
           <i class="fab fa-linkedin"></i>
         </a>
-         <a href="https://www.twitter.com" target="_blank" class="social-icon">
-          <i class="fab fa-twitter"></i>
-        </a>
+         
       </div>
     </div>
     </footer>
