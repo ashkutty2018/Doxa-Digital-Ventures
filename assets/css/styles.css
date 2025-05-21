@@ -478,7 +478,7 @@ header .logo img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: background-image 0.5s ease;
+  transition: background-image 0s ease;
   min-height: auto;
 }
 

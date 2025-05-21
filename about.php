@@ -73,7 +73,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <p class="section-text" data-line="1">   We Are a Results-Driven Digital Marketing Agency, and Our Mission at DOXA is Simple:<br> WE HELP BUSINESS GROW.</p>
+          <p class="section-text" data-line="1">   We Are a Results-Driven Digital Marketing Agency, and Our Mission at DOXA is Simple:<br> WE HELP BUSINESSES GROW.</p>
           <p class="section-text" data-line="2">Our work follows a customer-first philosophy, and we blend creativity and analytics to achieve measurable success. From startups seeking to gain an online presence to seasoned enterprises pursuing digital transformation, we offer the strategy and implementation you need to make it happen.
   
            
@@ -113,7 +113,7 @@
           <p class="section-text" data-line="3">  We prioritize customer satisfaction and data-backed decisions</p>
           <p class="section-text" data-line="4">  
             From fresh startups to global brands, we’ve got you covered</p>
-          <p class="section-text" data-line="5">  Join us to transform your digital presence today</p>
+          <p class="section-text" data-line="5">  Join us to transform your digital presence today!</p>
         </div>
       </div>
     </div>
