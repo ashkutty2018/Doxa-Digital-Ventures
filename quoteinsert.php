@@ -40,7 +40,7 @@ try {
     ";
 
     $mail->send();
-    echo "<script>alert('Message sent successfully!'); window.location.href='contact.php';</script>";
+    echo "<script>alert('Message sent successfully!'); window.location.href='index.php';</script>";
 } catch (Exception $e) {
     echo "<script>alert('Mailer Error: " . addslashes($mail->ErrorInfo) . "'); window.history.back();</script>";
 }
