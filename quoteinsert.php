@@ -18,14 +18,14 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-   $mail->Username   = 'doxadigitalventures@gmail.com'; // Your Gmail address
-    $mail->Password   = 'vfhwuyagfdlbjxjc';        // Gmail App Password
+   $mail->Username   = 'rashkutty2018@gmail.com'; // Your Gmail address
+    $mail->Password   = 'bwpykqccmmduelud';        // Gmail App Password
     $mail->SMTPSecure = 'tls';
     $mail->Port       = 587;
 
     // Recipients
-    $mail->setFrom('doxadigitalventures@gmail.com', 'Doxa Contact');
-    $mail->addAddress('doxadigitalventures@gmail.com', 'Admin');
+    $mail->setFrom('rashkutty2018@gmail.com.com', 'Doxa Contact');
+    $mail->addAddress('rashkutty2018@gmail.com', 'Admin');
 
     // Content
     $mail->isHTML(true);

@@ -65,9 +65,11 @@
   </div>
 
   <section class="news-slider">
-    <div class="news-track">
-      <!-- News/Offers Items -->
-      <div class="news-item">Limited Offer: 20% Off Website Design This Month!</div>
+    <div class="container-fluid">
+      <div class="news-carousel">
+        <div class="news-track">
+          <!-- News/Offers Items -->
+        <div class="news-item">Limited Offer: 20% Off Website Design This Month!</div>
       <div class="news-item">Boost Your SEO Rankings with Our Expert Strategies!</div>
       <div class="news-item">New Service: AI-Powered Marketing Now Available!</div>
       <div class="news-item">Get a Free Consultation for Social Media Campaigns!</div>
@@ -78,6 +80,11 @@
       <div class="news-item">New Service: AI-Powered Marketing Now Available!</div>
       <div class="news-item">Get a Free Consultation for Social Media Campaigns!</div>
       <div class="news-item">Special Deal: PPC Advertising Packages Starting at $99!</div>
+        </div>
+        <!-- Navigation Icons -->
+        <button class="news-prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="news-next"><i class="fas fa-chevron-right"></i></button>
+      </div>
     </div>
   </section>
 
@@ -402,7 +409,7 @@ Highly recommended and looking forward to future collaborations!"</p>
       <div class="footer-section">
         <h5>Contact</h5>
         <ul>
-          <li><i class="fas fa-home"></i> Melbourne, Australia</li>
+          <li><i class="fas fa-home"></i>  U1 80 Rockbank road, Ardeer 3022 <br>Melbourne, Australia</li>
           <li><i class="fas fa-envelope"></i> info@doxaconnect.au</li>
           <li><i class="fas fa-phone"></i> +61438139784</li>
         </ul>
@@ -432,30 +439,28 @@ Highly recommended and looking forward to future collaborations!"</p>
   </footer>
 
   <!-- Popup -->
-  <div class="popup-overlay" id="popupForm">
+<div class="popup-overlay" id="popupForm">
   <div class="popup-box">
     <span class="close-btn" onclick="closePopup()">×</span>
     <h2>Get a Quote</h2>
-    <form method="post" id="quoteform" action="quoteinsert.php">
-      <input type="text" id="name" name="name" placeholder="Your Name" required />
-      <input type="number" id="phone" name="phone" placeholder="Your Phone No" required />
-      <input type="email" id="email" name="email" placeholder="Your Email" required />
-      <select id="subject" name="subject" required>
-        <option value="" disabled selected>Select a Service</option>
-        <option value="Website Design & Development">Website Design & Development</option>
-        <option value="Content Creation">Content Creation</option>
-        <option value="Branding">Branding</option>
-        <option value="SEO">SEO</option>
-        <option value="Strategic Business Consultation">Strategic Business Consultation</option>
-        <option value="Neuro Marketing">Neuro Marketing</option>
-        <option value="Social Media Marketing">Social Media Marketing</option>
-        <option value="Whatsapp Marketing">Whatsapp Marketing</option>
-        <option value="PPC Advertising">PPC Advertising</option>
-        <option value="AI Powered Marketing">AI Powered Marketing</option>
-      </select>
-      <textarea rows="4" id="message" name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
+   <form action="https://formsubmit.co/info@doxaconnect.au" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="number" name="phone" placeholder="Your Phone No" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <select name="subject" required>
+    <option value="" disabled selected>Select a Service</option>
+    <option value="Website Design & Development">Website Design & Development</option>
+    <option value="Content Creation">Content Creation</option>
+    <!-- ... others ... -->
+  </select>
+  <textarea rows="4" name="message" placeholder="Your Message" required></textarea>
+  
+  <!-- Required Hidden Inputs -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
+
+  <button type="submit">Submit</button>
+</form>
   </div>
 </div>
 
@@ -703,6 +708,53 @@ Highly recommended and looking forward to future collaborations!"</p>
           header.classList.remove('scrolled');
         }
       });
+    });
+  </script>
+
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const track = document.querySelector('.news-track');
+      const items = document.querySelectorAll('.news-item');
+      const prevBtn = document.querySelector('.news-prev');
+      const nextBtn = document.querySelector('.news-next');
+      const itemCount = items.length;
+      let currentIndex = 0;
+      let itemsPerView = window.innerWidth > 768 ? 3 : 1; // 3 items in desktop, 1 in mobile
+
+      // Function to update itemsPerView on resize
+      window.addEventListener('resize', () => {
+        itemsPerView = window.innerWidth > 768 ? 3 : 1;
+        updateCarousel(); // Update carousel position on resize
+      });
+
+      // Function to update the carousel position
+      function updateCarousel() {
+        const totalGroups = Math.ceil(itemCount / itemsPerView); // Number of groups of items
+        // Ensure currentIndex stays within bounds
+        if (currentIndex >= totalGroups) {
+          currentIndex = 0; // Loop back to the start
+        } else if (currentIndex < 0) {
+          currentIndex = totalGroups - 1; // Loop to the end
+        }
+        const offset = -currentIndex * 100; // Move by 100% for each group
+        track.style.transform = `translateX(${offset}%)`;
+      }
+
+      // Next button click
+      nextBtn.addEventListener('click', () => {
+        currentIndex++;
+        updateCarousel();
+      });
+
+      // Previous button click
+      prevBtn.addEventListener('click', () => {
+        currentIndex--;
+        updateCarousel();
+      });
+
+      // Initialize the carousel
+      updateCarousel();
     });
   </script>
 </body>
