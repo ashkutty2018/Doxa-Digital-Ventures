@@ -224,18 +224,23 @@ h1.fade-in.hover-effect span {
 
 /* Class to trigger the ariseAnimation on page load */
 .top-center-logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   animation: ariseAnimation 1s ease-in-out forwards;
 }
-
 /* Animation to make the logo appear in the center */
 @keyframes ariseAnimation {
   from {
     width: 0;
+    height: 0;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0);
   }
   to {
     width: 300px;
+    height: 100px; /* Adjust based on your logo’s aspect ratio */
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
   }
@@ -436,7 +441,7 @@ header .logo img {
   }
 
   .forbox .right-column p {
-    font-size: 14px;
+    font-size: 12px;
     line-height: normal;
   }
 }
@@ -1301,7 +1306,7 @@ header.scrolled {
 /* Mobile View Adjustments (Below 768px) */
 @media (max-width: 768px) {
   .banner {
-    height: 30vh; /* Use viewport height for better scaling */
+    height: 250px; /* Use viewport height for better scaling */
     padding: 1rem; /* Reduce padding for mobile */
   }
 
@@ -1334,7 +1339,7 @@ header.scrolled {
 /* Smaller Mobile Adjustments (Below 576px) */
 @media (max-width: 576px) {
   .banner {
-    height: 25vh; /* Further reduce height for smaller screens */
+    height: 225px; /* Further reduce height for smaller screens */
     padding: 0.5rem;
   }
 
@@ -2650,7 +2655,7 @@ header.scrolled {
         flex: 0 0 100%; /* Show 1 item in mobile view */
         max-width: 100%;
         font-size: 1rem;
-        padding: 12px;
+        padding: 18px;
         margin-right: 0; /* Remove gap in mobile view */
       }
 
@@ -2673,7 +2678,7 @@ header.scrolled {
     @media (max-width: 576px) {
       .news-item {
         font-size: 0.9rem;
-        padding: 10px;
+        padding: 15px;
       }
 
       .news-prev,
