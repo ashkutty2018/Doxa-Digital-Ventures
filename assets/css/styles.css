@@ -39,7 +39,7 @@ body {
 
 @media (max-width: 768px) {
   .parallax {
-    height: 80vh; /* Adjusted height for smaller screens */
+    height: 100vh; /* Adjusted height for smaller screens */
     justify-content: center; /* Center content vertically */
   }
 }
