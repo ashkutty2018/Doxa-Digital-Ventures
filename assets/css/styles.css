@@ -37,7 +37,12 @@ body {
   font-size: 1.2rem;
 }
 
-
+@media (max-width: 768px) {
+  .parallax {
+    height: 80vh; /* Adjusted height for smaller screens */
+    justify-content: center; /* Center content vertically */
+  }
+}
 .parallax-background {
   position: absolute;
   top: 0;
@@ -384,7 +389,7 @@ header .logo img {
 
 .forbox p {
   font-size: 18px;
-  line-height: 1.6;
+ 
   color: rgb(7, 7, 7);
   padding: top 1%;
   text-align: justify;
@@ -402,7 +407,7 @@ header .logo img {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .forbox .row.align-items-start {
     flex-direction: column;
   }
@@ -432,6 +437,7 @@ header .logo img {
 
   .forbox .right-column p {
     font-size: 14px;
+    line-height: normal;
   }
 }
 
@@ -528,7 +534,7 @@ header .logo img {
   position: relative;
   top: 0;
   letter-spacing: 2px;
-  text-transform: uppercase;
+ 
 }
 
 #services .card-text {
@@ -1295,12 +1301,12 @@ header.scrolled {
 /* Mobile View Adjustments (Below 768px) */
 @media (max-width: 768px) {
   .banner {
-    height: 50vh; /* Use viewport height for better scaling */
+    height: 30vh; /* Use viewport height for better scaling */
     padding: 1rem; /* Reduce padding for mobile */
   }
 
   .banner-background {
-    height: 100%; /* Ensure it matches the adjusted banner height */
+   /* Ensure it matches the adjusted banner height */
     background-size: cover; /* Ensure the image covers the entire area */
     background-position: center;
       object-fit: cover;
@@ -1328,7 +1334,7 @@ header.scrolled {
 /* Smaller Mobile Adjustments (Below 576px) */
 @media (max-width: 576px) {
   .banner {
-    height: 40vh; /* Further reduce height for smaller screens */
+    height: 25vh; /* Further reduce height for smaller screens */
     padding: 0.5rem;
   }
 
@@ -1546,6 +1552,7 @@ header.scrolled {
       font-size: 1rem;
       color: #ccc;
       font-weight: 500;
+      line-height: 0;
     }
 
     .contact-form input,
@@ -1708,7 +1715,8 @@ header.scrolled {
 
       .contact-form,
       .contact-info {
-        max-width: 100%; /* Full width on smaller screens */
+        max-width: 100%;
+        padding: 0; /* Full width on smaller screens */
       }
 
     }
@@ -1962,7 +1970,7 @@ header.scrolled {
 }
 
 .clients .section-title-black {
-  font-size: 3.3vw; /* Use viewport width for scaling (approx 48px at 1366px) */
+  font-size: 68px; /* Use viewport width for scaling (approx 48px at 1366px) */
   font-weight: 900;
   text-transform: uppercase;
   font-family: 'Bebas Neue', sans-serif;
@@ -2148,7 +2156,7 @@ header.scrolled {
   }
 
   .clients .section-title-black {
-    font-size: 5vw; /* Larger on tablet for better readability */
+    font-size: 68px; /* Larger on tablet for better readability */
     height: auto;
     padding: 20px 0;
   }
@@ -2261,7 +2269,7 @@ header.scrolled {
   }
 
   .clients .section-title-black {
-    font-size: 6vw; /* Adjust for mobile */
+       font-size: 68px; /* Larger on tablet for better readability */ /* Adjust for mobile */
     height: auto;
     padding: 15px 0;
   }
@@ -2286,7 +2294,7 @@ header.scrolled {
   }
 
   .clients .section-title-black {
-    font-size: 7vw; /* Further adjust for small mobile */
+        font-size: 68px; /* Larger on tablet for better readability */ /* Further adjust for small mobile */
     padding: 10px 0;
   }
 

@@ -443,24 +443,26 @@ Highly recommended and looking forward to future collaborations!"</p>
   <div class="popup-box">
     <span class="close-btn" onclick="closePopup()">×</span>
     <h2>Get a Quote</h2>
-   <form action="https://formsubmit.co/info@doxaconnect.au" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="number" name="phone" placeholder="Your Phone No" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <select name="subject" required>
-    <option value="" disabled selected>Select a Service</option>
-    <option value="Website Design & Development">Website Design & Development</option>
-    <option value="Content Creation">Content Creation</option>
-    <!-- ... others ... -->
-  </select>
-  <textarea rows="4" name="message" placeholder="Your Message" required></textarea>
-  
-  <!-- Required Hidden Inputs -->
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
-
-  <button type="submit">Submit</button>
-</form>
+  <form method="post" id="quoteform" action="quoteinsert.php">
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+      <input type="number" id="phone" name="phone" placeholder="Your Phone No" required />
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+      <select id="subject" name="subject" required>
+        <option value="" disabled selected>Select a Service</option>
+        <option value="Website Design & Development">Website Design & Development</option>
+        <option value="Content Creation">Content Creation</option>
+        <option value="Branding">Branding</option>
+        <option value="SEO">SEO</option>
+        <option value="Strategic Business Consultation">Strategic Business Consultation</option>
+        <option value="Neuro Marketing">Neuro Marketing</option>
+        <option value="Social Media Marketing">Social Media Marketing</option>
+        <option value="Whatsapp Marketing">Whatsapp Marketing</option>
+        <option value="PPC Advertising">PPC Advertising</option>
+        <option value="AI Powered Marketing">AI Powered Marketing</option>
+      </select>
+      <textarea rows="4" id="message" name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
   </div>
 </div>
 

@@ -11,6 +11,18 @@ $phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
 $subject = isset($_POST['subject']) ? trim($_POST['subject']) : '';
 $message = isset($_POST['message']) ? trim($_POST['message']) : '';
 
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo "<script>alert('Invalid email address.'); window.history.back();</script>";
+    exit;
+}
+
+// Validate phone number (only digits, 10-15 digits)
+if (!preg_match('/^[0-9]{10,15}$/', $phone)) {
+    echo "<script>alert('Invalid phone number. Only digits allowed (10-15 digits).'); window.history.back();</script>";
+    exit;
+}
+
 $mail = new PHPMailer(true);
 
 try {
@@ -18,18 +30,18 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-   $mail->Username   = 'rashkutty2018@gmail.com'; // Your Gmail address
-    $mail->Password   = 'bwpykqccmmduelud';        // Gmail App Password
+    $mail->Username   = 'doxadigitalventures@gmail.com'; // Your Gmail address
+    $mail->Password   = 'vfhwuyagfdlbjxjc';        // Gmail App Password
     $mail->SMTPSecure = 'tls';
     $mail->Port       = 587;
 
     // Recipients
-    $mail->setFrom('rashkutty2018@gmail.com.com', 'Doxa Contact');
-    $mail->addAddress('rashkutty2018@gmail.com', 'Admin');
+    $mail->setFrom('doxadigitalventures@gmail.com', 'Doxa Contact');
+    $mail->addAddress('doxadigitalventures@gmail.com', 'Admin');
 
     // Content
     $mail->isHTML(true);
-    $mail->Subject = 'New Contact Form Submission';
+    $mail->Subject = 'quote From Doxa';
     $mail->Body    = "
         <h2>New Inquiry</h2>
         <p><strong>Name:</strong> {$name}</p>

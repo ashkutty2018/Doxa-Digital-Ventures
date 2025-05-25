@@ -10,7 +10,16 @@ $email = isset($_POST['email']) ? trim($_POST['email']) : '';
 $phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
 
 $message = isset($_POST['message']) ? trim($_POST['message']) : '';
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo "<script>alert('Invalid email address.'); window.history.back();</script>";
+    exit;
+}
 
+// Validate phone number (only digits, 10-15 digits)
+if (!preg_match('/^[0-9]{10,15}$/', $phone)) {
+    echo "<script>alert('Invalid phone number. Only digits allowed (10-15 digits).'); window.history.back();</script>";
+    exit;
+}
 $mail = new PHPMailer(true);
 
 try {
