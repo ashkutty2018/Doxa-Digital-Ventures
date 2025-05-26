@@ -39,7 +39,7 @@ body {
 
 @media (max-width: 768px) {
   .parallax {
-    height: 100vh; /* Adjusted height for smaller screens */
+    height: 90vh; /* Adjusted height for smaller screens */
     justify-content: center; /* Center content vertically */
   }
 }
@@ -2655,8 +2655,9 @@ header.scrolled {
         flex: 0 0 100%; /* Show 1 item in mobile view */
         max-width: 100%;
         font-size: 1rem;
-        padding: 18px;
-        margin-right: 0; /* Remove gap in mobile view */
+        padding: 20px;
+        margin-right: 0;
+        margin-left: 0; /* Remove gap in mobile view */
       }
 
       .news-prev,
@@ -2678,7 +2679,7 @@ header.scrolled {
     @media (max-width: 576px) {
       .news-item {
         font-size: 0.9rem;
-        padding: 15px;
+        padding: 18px;
       }
 
       .news-prev,
