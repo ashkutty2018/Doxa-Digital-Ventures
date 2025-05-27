@@ -440,9 +440,9 @@ header .logo img {
     font-size: 20px;
   }
 
-  .forbox .right-column p {
-    font-size: 12px;
-    line-height: normal;
+  .forbox  p {
+    font-size: 13px;
+    line-height: 1.4;
   }
 }
 
