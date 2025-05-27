@@ -64,29 +64,29 @@
     </section>
   </div>
 
-  <section class="news-slider">
+ <section class="news-slider">
     <div class="container-fluid">
-      <div class="news-carousel">
-        <div class="news-track">
-          <!-- News/Offers Items -->
-        <div class="news-item">Limited Offer: 20% Off Website Design This Month!</div>
-      <div class="news-item">Boost Your SEO Rankings with Our Expert Strategies!</div>
-      <div class="news-item">New Service: AI-Powered Marketing Now Available!</div>
-      <div class="news-item">Get a Free Consultation for Social Media Campaigns!</div>
-      <div class="news-item">Special Deal: PPC Advertising Packages Starting at $99!</div>
-      <!-- Duplicate for smooth infinite loop -->
-      <div class="news-item">Limited Offer: 20% Off Website Design This Month!</div>
-      <div class="news-item">Boost Your SEO Rankings with Our Expert Strategies!</div>
-      <div class="news-item">New Service: AI-Powered Marketing Now Available!</div>
-      <div class="news-item">Get a Free Consultation for Social Media Campaigns!</div>
-      <div class="news-item">Special Deal: PPC Advertising Packages Starting at $99!</div>
+        <div class="news-carousel">
+            <div class="news-track">
+                <!-- News/Offers Items -->
+                <div class="news-item">Limited Offer: <br>20% Off Website Design This Month!</div>
+                <div class="news-item">Boost Your SEO Rankings with Our <br>Expert Strategies!</div>
+                <div class="news-item">New Service: AI-Powered Marketing<br> Now Available!</div>
+                <div class="news-item">Get a Free Consultation for Social<br> Media Campaigns!</div>
+                <div class="news-item">Special Deal: PPC Advertising Packages<br> Starting at $99!</div>
+                <!-- Duplicate for smooth infinite loop -->
+                <div class="news-item">Limited Offer: 20% Off Website Design This Month!</div>
+                <div class="news-item">Boost Your SEO Rankings with<br> Our Expert Strategies!</div>
+                <div class="news-item">New Service: AI-Powered Marketing Now Available!</div>
+                <div class="news-item">Get a Free Consultation for Social Media Campaigns!</div>
+                <div class="news-item">Special Deal: PPC Advertising Packages Starting at $99!</div>
+            </div>
+            <!-- Navigation Icons -->
+            <button class="news-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="news-next"><i class="fas fa-chevron-right"></i></button>
         </div>
-        <!-- Navigation Icons -->
-        <button class="news-prev"><i class="fas fa-chevron-left"></i></button>
-        <button class="news-next"><i class="fas fa-chevron-right"></i></button>
-      </div>
     </div>
-  </section>
+</section>
 
   <section class="forbox" id="forbox">
     <div class="container">
@@ -713,51 +713,69 @@ Highly recommended and looking forward to future collaborations!"</p>
     });
   </script>
 
-  
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const track = document.querySelector('.news-track');
-      const items = document.querySelectorAll('.news-item');
-      const prevBtn = document.querySelector('.news-prev');
-      const nextBtn = document.querySelector('.news-next');
-      const itemCount = items.length;
-      let currentIndex = 0;
-      let itemsPerView = window.innerWidth > 768 ? 3 : 1; // 3 items in desktop, 1 in mobile
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.news-track');
+    const items = document.querySelectorAll('.news-item');
+    const prevBtn = document.querySelector('.news-prev');
+    const nextBtn = document.querySelector('.news-next');
+    let currentIndex = 0;
+    const totalItems = items.length / 2; // Since items are duplicated for infinite loop
 
-      // Function to update itemsPerView on resize
-      window.addEventListener('resize', () => {
-        itemsPerView = window.innerWidth > 768 ? 3 : 1;
-        updateCarousel(); // Update carousel position on resize
-      });
+    // Function to get the width of one item (including the margin)
+    const getItemWidth = () => {
+        const itemStyle = window.getComputedStyle(items[0]);
+        const marginRight = parseFloat(itemStyle.marginRight);
+        // In mobile view, use viewport width (100vw); in desktop, use the item's computed width
+        const isMobile = window.innerWidth <= 768;
+        const itemWidth = isMobile ? window.innerWidth : items[0].offsetWidth;
+        return itemWidth + marginRight; // Total width including the gap
+    };
 
-      // Function to update the carousel position
-      function updateCarousel() {
-        const totalGroups = Math.ceil(itemCount / itemsPerView); // Number of groups of items
-        // Ensure currentIndex stays within bounds
-        if (currentIndex >= totalGroups) {
-          currentIndex = 0; // Loop back to the start
-        } else if (currentIndex < 0) {
-          currentIndex = totalGroups - 1; // Loop to the end
+    // Function to update the carousel position
+    const updateCarousel = (withTransition = true) => {
+        const itemWidth = getItemWidth();
+        if (withTransition) {
+            track.style.transition = 'transform 0.5s ease-in-out';
+        } else {
+            track.style.transition = 'none'; // Disable transition for instant jump
         }
-        const offset = -currentIndex * 100; // Move by 100% for each group
-        track.style.transform = `translateX(${offset}%)`;
-      }
+        track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    };
 
-      // Next button click
-      nextBtn.addEventListener('click', () => {
+    // Infinite loop handling
+    const handleInfiniteLoop = () => {
+        if (currentIndex >= totalItems) {
+            currentIndex = 0;
+            updateCarousel(false); // Jump without transition
+        } else if (currentIndex < 0) {
+            currentIndex = totalItems - 1;
+            updateCarousel(false); // Jump without transition
+        }
+    };
+
+    // Next button click
+    nextBtn.addEventListener('click', () => {
         currentIndex++;
         updateCarousel();
-      });
+        setTimeout(handleInfiniteLoop, 500); // Wait for the transition to finish
+    });
 
-      // Previous button click
-      prevBtn.addEventListener('click', () => {
+    // Previous button click
+    prevBtn.addEventListener('click', () => {
         currentIndex--;
         updateCarousel();
-      });
-
-      // Initialize the carousel
-      updateCarousel();
+        setTimeout(handleInfiniteLoop, 500); // Wait for the transition to finish
     });
-  </script>
+
+    // Update carousel on window resize to handle responsive changes
+    window.addEventListener('resize', () => {
+        updateCarousel(false); // No transition on resize to avoid jank
+    });
+
+    // Initial position
+    updateCarousel();
+});
+</script>
 </body>
 </html>
