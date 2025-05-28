@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="DRU8eyfIcu6t90ONsQbZRF9plKAojjX2n1Rub3pMwBI" />
   <title>DOXA Digital Ventures</title>
   <!-- Favicon -->
   <link href="assets/img/doxa.png" rel="icon" />
