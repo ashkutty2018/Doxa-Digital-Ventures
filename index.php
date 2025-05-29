@@ -331,7 +331,6 @@ Highly recommended and looking forward to future collaborations!"</p>
   </section>
 
 
-  <!-- Blog Section -->
   <section class="blog-section py-5 text-center">
     <div class="container-fluid">
       <h2 class="section-title">OUR LATEST BLOGS</h2>
@@ -348,7 +347,7 @@ Highly recommended and looking forward to future collaborations!"</p>
             </div>
             <div class="blog-content">
               <p class="blog-excerpt">Discover the latest SEO trends that can help your business stay ahead in search rankings this year.</p>
-              <a href="#" class="read-more-btn">Read More</a>
+              <a href="blog-detail.php?id=1" class="read-more-btn">Read More</a>
             </div>
           </div>
           <!-- Blog Post 2 -->
@@ -361,7 +360,7 @@ Highly recommended and looking forward to future collaborations!"</p>
             </div>
             <div class="blog-content">
               <p class="blog-excerpt">Learn how to leverage social media platforms to boost engagement and grow your brand.</p>
-              <a href="#" class="read-more-btn">Read More</a>
+              <a href="blog-detail.php?id=2" class="read-more-btn">Read More</a>
             </div>
           </div>
           <!-- Blog Post 3 -->
@@ -374,49 +373,12 @@ Highly recommended and looking forward to future collaborations!"</p>
             </div>
             <div class="blog-content">
               <p class="blog-excerpt">Explore how AI can transform your marketing strategies with personalized campaigns.</p>
-              <a href="#" class="read-more-btn">Read More</a>
-            </div>
-          </div>
-          <!-- Duplicate Blog Posts for Seamless Scroll -->
-          <div class="blog-card">
-            <div class="blog-image-wrapper">
-              <img src="assets/img/seoblog.jpg" alt="SEO Trends 2025" class="blog-image">
-              <div class="blog-image-overlay">
-                <h5 class="blog-title">5 SEO Trends to Watch in 2025</h5>
-              </div>
-            </div>
-            <div class="blog-content">
-              <p class="blog-excerpt">Discover the latest SEO trends that can help your business stay ahead in search rankings this year.</p>
-              <a href="#" class="read-more-btn">Read More</a>
-            </div>
-          </div>
-          <div class="blog-card">
-            <div class="blog-image-wrapper">
-              <img src="assets/img/socialblog.jpg" alt="Social Media Marketing" class="blog-image">
-              <div class="blog-image-overlay">
-                <h5 class="blog-title">The Power of Social Media Marketing</h5>
-              </div>
-            </div>
-            <div class="blog-content">
-              <p class="blog-excerpt">Learn how to leverage social media platforms to boost engagement and grow your brand.</p>
-              <a href="#" class="read-more-btn">Read More</a>
-            </div>
-          </div>
-          <div class="blog-card">
-            <div class="blog-image-wrapper">
-              <img src="assets/img/aiblog.jpg" alt="AI Marketing Future" class="blog-image">
-              <div class="blog-image-overlay">
-                <h5 class="blog-title">AI-Powered Marketing: The Future is Here</h5>
-              </div>
-            </div>
-            <div class="blog-content">
-              <p class="blog-excerpt">Explore how AI can transform your marketing strategies with personalized campaigns.</p>
-              <a href="#" class="read-more-btn">Read More</a>
+              <a href="blog-detail.php?id=3" class="read-more-btn">Read More</a>
             </div>
           </div>
 
-          <!-- Blog Post 4 -->
-  <div class="blog-card">
+
+          <div class="blog-card">
   <div class="blog-image-wrapper">
     <img src="assets/img/aifutureblog.jpg" alt="The Future of Marketing is AI-Driven" class="blog-image">
     <div class="blog-image-overlay">
@@ -428,12 +390,62 @@ Highly recommended and looking forward to future collaborations!"</p>
     <a href="blog-detail.php?id=4" class="read-more-btn">Read More</a>
   </div>
 </div>
+          <!-- Duplicate Blog Posts for Seamless Scroll -->
+          <div class="blog-card">
+            <div class="blog-image-wrapper">
+              <img src="assets/img/seoblog.jpg" alt="SEO Trends 2025" class="blog-image">
+              <div class="blog-image-overlay">
+                <h5 class="blog-title">5 SEO Trends to Watch in 2025</h5>
+              </div>
+            </div>
+            <div class="blog-content">
+              <p class="blog-excerpt">Discover the latest SEO trends that can help your business stay ahead in search rankings this year.</p>
+              <a href="blog-detail.php?id=1" class="read-more-btn">Read More</a>
+            </div>
+          </div>
+          <div class="blog-card">
+            <div class="blog-image-wrapper">
+              <img src="assets/img/socialblog.jpg" alt="Social Media Marketing" class="blog-image">
+              <div class="blog-image-overlay">
+                <h5 class="blog-title">The Power of Social Media Marketing</h5>
+              </div>
+            </div>
+            <div class="blog-content">
+              <p class="blog-excerpt">Learn how to leverage social media platforms to boost engagement and grow your brand.</p>
+              <a href="blog-detail.php?id=2" class="read-more-btn">Read More</a>
+            </div>
+          </div>
+          <div class="blog-card">
+            <div class="blog-image-wrapper">
+              <img src="assets/img/aiblog.jpg" alt="AI Marketing Future" class="blog-image">
+              <div class="blog-image-overlay">
+                <h5 class="blog-title">AI-Powered Marketing: The Future is Here</h5>
+              </div>
+            </div>
+            <div class="blog-content">
+              <p class="blog-excerpt">Explore how AI can transform your marketing strategies with personalized campaigns.</p>
+              <a href="blog-detail.php?id=3" class="read-more-btn">Read More</a>
+            </div>
+          </div>
 
+
+
+          <div class="blog-card">
+  <div class="blog-image-wrapper">
+    <img src="assets/img/aifutureblog.jpg" alt="The Future of Marketing is AI-Driven" class="blog-image">
+    <div class="blog-image-overlay">
+      <h5 class="blog-title">The Future of Marketing is AI-Driven</h5>
+    </div>
+  </div>
+  <div class="blog-content">
+    <p class="blog-excerpt">Discover how AI is reshaping marketing with predictive, personalized, and autonomous strategies. Stay ahead of the 2025 trends!</p>
+    <a href="blog-detail.php?id=4" class="read-more-btn">Read More</a>
+  </div>
+</div>
         </div>
       </div>
     </div>
   </section>
-
   <!-- Combined Footer -->
   <footer class="combined-footer">
     <h2><img src="assets/img/white.png" height="50px" width="150px"></h2>
