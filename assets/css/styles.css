@@ -1721,7 +1721,7 @@ header.scrolled {
       .contact-form,
       .contact-info {
         max-width: 100%;
-        padding: 0; /* Full width on smaller screens */
+        padding: 30px; /* Full width on smaller screens */
       }
 
     }
