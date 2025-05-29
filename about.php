@@ -225,7 +225,7 @@
         <a href="https://www.facebook.com/share/1RHvz95efv/?mibextid=qi2Omg" target="_blank" class="social-icon">
           <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="https://www.youtube.com" target="_blank" class="social-icon">
+        <a href="https://www.youtube.com/channel/UC3mFirrzCf2EB4RsHJU8KQw" target="_blank" class="social-icon">
           <i class="fab fa-youtube"></i>
         </a>
          <a href="https://www.linkedin.com" target="_blank" class="social-icon">
