@@ -269,7 +269,7 @@
                     <!-- Debug the image path (uncomment to troubleshoot) -->
                     <!-- <p>Image Path: /assets/img/<?php echo htmlspecialchars($blog['image']); ?></p> -->
                     <img src="/assets/img/<?php echo htmlspecialchars($blog['image']); ?>" alt="<?php echo htmlspecialchars($blog['title']); ?>" class="blog-detail-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400?text=Image+Not+Found';">
-                    <h1 class="blog-detail-title"><?php echo htmlspecialchars($blog['title']); ?></h1>
+                    <p class="blog-detail-title"><?php echo htmlspecialchars($blog['title']); ?></p>
                     <p class="text-muted mb-4">Posted on <?php echo date('F j, Y', strtotime($blog['created_at'])); ?></p>
                     <div class="blog-detail-content">
                         <?php echo nl2br(htmlspecialchars($blog['content'])); ?>
