@@ -28,6 +28,34 @@
 
   <!-- Custom Styles -->
   <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [{
+    "@type": "ListItem", 
+    "position": 1, 
+    "name": "HOME",
+    "item": "https://www.doxadigitalventures.com/"  
+  },{
+    "@type": "ListItem", 
+    "position": 2, 
+    "name": "ABOUT",
+    "item": "https://www.doxadigitalventures.com/about.php"  
+  },{
+    "@type": "ListItem", 
+    "position": 3, 
+    "name": "PACKAGE",
+    "item": "https://www.doxadigitalventures.com/package.php"  
+  },{
+    "@type": "ListItem", 
+    "position": 4, 
+    "name": "CONTACT",
+    "item": "https://www.doxadigitalventures.com/contact.php"  
+  }]
+}
+</script>
+
   <!-- Inline Styles for Popup -->
  <style>
     .popup-box ul {

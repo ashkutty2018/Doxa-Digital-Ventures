@@ -23,6 +23,50 @@
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "DOXA Digital Ventures",
+  "url": "https://www.doxadigitalventures.com/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "57",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [{
+    "@type": "ListItem", 
+    "position": 1, 
+    "name": "HOME",
+    "item": "https://www.doxadigitalventures.com/"  
+  },{
+    "@type": "ListItem", 
+    "position": 2, 
+    "name": "ABOUT",
+    "item": "https://www.doxadigitalventures.com/about.php"  
+  },{
+    "@type": "ListItem", 
+    "position": 3, 
+    "name": "PACKAGE",
+    "item": "https://www.doxadigitalventures.com/package.php"  
+  },{
+    "@type": "ListItem", 
+    "position": 4, 
+    "name": "CONTACT",
+    "item": "https://www.doxadigitalventures.com/contact.php"  
+  }]
+}
+</script>
+
 </head>
 <body>
   <header>

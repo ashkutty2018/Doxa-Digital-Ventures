@@ -4,6 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="DRU8eyfIcu6t90ONsQbZRF9plKAojjX2n1Rub3pMwBI" />
+    <meta name="title" content="Doxa Digital Ventures | Digital Marketing in Melbourne ">
+     <meta name="description" content="Doxa Digital Ventures is a Melbourne-based agency offering expert digital marketing, web design, SEO, and branding solutions to grow your business.">
+<meta name="keywords" content="seo agency, digital marketing, digital agency, digital marketing agency melbourne, digital marketing services, social media marketing, best seo agency, seo company melbourne">
+<meta name="author" content="Doxa Digital Ventures">
+
   <title>DOXA Digital Ventures</title>
   <!-- Bootstrap CSS -->
   <link href="assets/img/doxa.png" rel="icon" />
@@ -29,6 +34,34 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
   <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [{
+    "@type": "ListItem", 
+    "position": 1, 
+    "name": "HOME",
+    "item": "https://www.doxadigitalventures.com/"  
+  },{
+    "@type": "ListItem", 
+    "position": 2, 
+    "name": "ABOUT",
+    "item": "https://www.doxadigitalventures.com/about.php"  
+  },{
+    "@type": "ListItem", 
+    "position": 3, 
+    "name": "PACKAGE",
+    "item": "https://www.doxadigitalventures.com/package.php"  
+  },{
+    "@type": "ListItem", 
+    "position": 4, 
+    "name": "CONTACT",
+    "item": "https://www.doxadigitalventures.com/contact.php"  
+  }]
+}
+</script>
+
    <style>
   body
     {
