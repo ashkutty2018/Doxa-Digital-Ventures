@@ -232,36 +232,37 @@
             $blog_id = $_GET['id'];
             $blog = [];
 
-            // Hardcoded blog details
-            if ($blog_id == 1) {
-                $blog = [
-                    'title' => '5 SEO Trends to Watch in 2025',
-                    'image' => 'seoblog.jpg',
-                    'content' => "In 2025, SEO continues to evolve rapidly with advancements in AI, voice search, and user experience. Here are the top 5 trends to watch:\n\n1. **AI-Driven Content Optimization**: Tools like BERT and MUM are making search engines smarter at understanding context.\n2. **Voice Search Optimization**: With the rise of smart speakers, optimizing for voice queries is crucial.\n3. **Core Web Vitals**: Google’s focus on user experience metrics like loading speed and interactivity is stronger than ever.\n4. **Video SEO**: Video content is becoming a dominant force in search rankings.\n5. **E-A-T (Expertise, Authoritativeness, Trustworthiness)**: Building trust through high-quality content is key.\n\nStay ahead by adapting to these trends and refining your SEO strategy.",
-                    'created_at' => '2025-05-29'
-                ];
-            } elseif ($blog_id == 2) {
-                $blog = [
-                    'title' => 'The Power of Social Media Marketing',
-                    'image' => 'socialblog.jpg',
-                    'content' => "Social media marketing has become a cornerstone of digital success. Here’s how to harness its power:\n\n- **Choose the Right Platforms**: Focus on platforms where your audience is most active, like Instagram for younger demographics or LinkedIn for professionals.\n- **Engage with Your Audience**: Respond to comments, run polls, and create interactive content to build a community.\n- **Leverage Influencers**: Partner with influencers to expand your reach and credibility.\n- **Use Paid Ads Strategically**: Platforms like Facebook and Instagram offer powerful targeting options for ads.\n- **Analyze and Adapt**: Use analytics tools to track performance and refine your strategy.\n\nStart small, experiment, and scale your efforts as you see results.",
-                    'created_at' => '2025-05-29'
-                ];
-            } elseif ($blog_id == 3) {
-                $blog = [
-                    'title' => 'AI-Powered Marketing: The Future is Here',
-                    'image' => 'aiblog.jpg',
-                    'content' => "AI is revolutionizing marketing by enabling hyper-personalized and efficient campaigns. Here’s how:\n\n1. **Personalization at Scale**: AI can analyze user data to deliver tailored content, from product recommendations to email campaigns.\n2. **Predictive Analytics**: Forecast customer behavior and optimize marketing strategies with AI-driven insights.\n3. **Chatbots and Customer Service**: AI-powered chatbots provide 24/7 support, improving user experience.\n4. **Content Creation**: Tools like GPT can generate blog posts, ad copy, and more, saving time.\n5. **Ad Optimization**: AI optimizes ad spend by targeting the right audience at the right time.\n\nEmbrace AI to stay competitive in the fast-evolving marketing landscape.",
-                    'created_at' => '2025-05-29'
-                ];
-            } elseif ($blog_id == 4) {
-                $blog = [
-                    'title' => 'The Future of Marketing is AI-Driven',
-                    'image' => 'aifutureblog.jpg',
-                    'content' => "Artificial Intelligence (AI) is set to redefine marketing in 2025 and beyond by introducing predictive, personalized, and autonomous strategies. Here’s what you need to know to stay ahead:\n\n1. **Predictive Analytics**: AI can forecast consumer behavior with high accuracy, allowing businesses to target the right audience at the right time.\n2. **Hyper-Personalization**: AI enables tailored marketing experiences, from personalized emails to dynamic website content, increasing engagement.\n3. **Autonomous Campaigns**: AI-driven tools can manage and optimize entire marketing campaigns with minimal human intervention, saving time and resources.\n4. **Enhanced Customer Insights**: AI analyzes vast amounts of data to provide deep insights into customer preferences and trends.\n5. **Ethical Considerations**: As AI becomes more prevalent, ensuring transparency and ethical use of data will be crucial.\n\nAdopting AI-driven marketing strategies now will position your business at the forefront of innovation in 2025.",
-                    'created_at' => '2025-05-29'
-                ];
-            }
+          // Hardcoded blog details
+if ($blog_id == 1) {
+    $blog = [
+        'title' => '5 SEO Trends to Watch in 2025',
+        'image' => 'seoblog.jpg',
+        'content' => "In 2025, SEO continues to evolve rapidly with advancements in AI, voice search, and user experience. Here are the top 5 trends to watch:\n\n1. AI-Driven Content Optimization: Tools like BERT and MUM are making search engines smarter at understanding context.\n2. Voice Search Optimization: With the rise of smart speakers, optimizing for voice queries is crucial.\n3. Core Web Vitals: Google’s focus on user experience metrics like loading speed and interactivity is stronger than ever.\n4. Video SEO: Video content is becoming a dominant force in search rankings.\n5. E-A-T (Expertise, Authoritativeness, Trustworthiness): Building trust through high-quality content is key.\n\nStay ahead by adapting to these trends and refining your SEO strategy.",
+        'created_at' => '2025-05-29'
+    ];
+} elseif ($blog_id == 2) {
+    $blog = [
+        'title' => 'The Power of Social Media Marketing',
+        'image' => 'socialblog.jpg',
+        'content' => "Social media marketing has become a cornerstone of digital success. Here’s how to harness its power:\n\n- Choose the Right Platforms: Focus on platforms where your audience is most active, like Instagram for younger demographics or LinkedIn for professionals.\n- Engage with Your Audience: Respond to comments, run polls, and create interactive content to build a community.\n- Leverage Influencers: Partner with influencers to expand your reach and credibility.\n- Use Paid Ads Strategically: Platforms like Facebook and Instagram offer powerful targeting options for ads.\n- Analyze and Adapt: Use analytics tools to track performance and refine your strategy.\n\nStart small, experiment, and scale your efforts as you see results.",
+        'created_at' => '2025-05-29'
+    ];
+} elseif ($blog_id == 3) {
+    $blog = [
+        'title' => 'AI-Powered Marketing: The Future is Here',
+        'image' => 'aiblog.jpg',
+        'content' => "AI is revolutionizing marketing by enabling hyper-personalized and efficient campaigns. Here’s how:\n\n1. Personalization at Scale: AI can analyze user data to deliver tailored content, from product recommendations to email campaigns.\n2. Predictive Analytics: Forecast customer behavior and optimize marketing strategies with AI-driven insights.\n3. Chatbots and Customer Service: AI-powered chatbots provide 24/7 support, improving user experience.\n4. Content Creation: Tools like GPT can generate blog posts, ad copy, and more, saving time.\n5. Ad Optimization: AI optimizes ad spend by targeting the right audience at the right time.\n\nEmbrace AI to stay competitive in the fast-evolving marketing landscape.",
+        'created_at' => '2025-05-29'
+    ];
+} elseif ($blog_id == 4) {
+    $blog = [
+        'title' => 'The Future of Marketing is AI-Driven',
+        'image' => 'aifutureblog.jpg',
+        'content' => "Artificial Intelligence (AI) is set to redefine marketing in 2025 and beyond by introducing predictive, personalized, and autonomous strategies. Here’s what you need to know to stay ahead:\n\n1. Predictive Analytics: AI can forecast consumer behavior with high accuracy, allowing businesses to target the right audience at the right time.\n2. Hyper-Personalization: AI enables tailored marketing experiences, from personalized emails to dynamic website content, increasing engagement.\n3. Autonomous Campaigns: AI-driven tools can manage and optimize entire marketing campaigns with minimal human intervention, saving time and resources.\n4. Enhanced Customer Insights: AI analyzes vast amounts of data to provide deep insights into customer preferences and trends.\n5. Ethical Considerations: As AI becomes more prevalent, ensuring transparency and ethical use of data will be crucial.\n\nAdopting AI-driven marketing strategies now will position your business at the forefront of innovation in 2025.",
+        'created_at' => '2025-05-29'
+    ];
+}
+
             ?>
 
             <div class="row">
