@@ -8,6 +8,7 @@
   <!-- Bootstrap CSS -->
   <link href="assets/img/doxa.png" rel="icon" />
   <!-- Fonts -->
+   <link rel="canonical" href="https://doxadigitalventures.com/contact.php" />
   <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">

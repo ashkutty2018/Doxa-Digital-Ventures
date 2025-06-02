@@ -7,7 +7,7 @@
   <title>DOXA Digital Ventures</title>
   <!-- Favicon -->
   <link href="assets/img/doxa.png" rel="icon" />
-
+   <link rel="canonical" href="https://doxadigitalventures.com/package.php" />
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
